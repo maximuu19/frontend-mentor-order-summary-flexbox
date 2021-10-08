@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  /* primary colors */
+  --pale_blue: hsl(225, 100%, 94%);
+  --bright_blue: hsl(245, 75%, 52%);
+  /* neutral colors  */
+  --very_pale_blue: hsl(225, 100%, 98%);
+  --desaturated_blue: hsl(224, 23%, 55%);
+  --dark_blue: hsl(223, 47%, 23%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--desaturated_blue);
+}
+.container h1 {
+  color: hsl(223, 47%, 23%);
+  margin: 10px 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--pale_blue);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* Attribute */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.bg__image {
+  background: url("images/pattern-background-mobile.svg") no-repeat center/cover;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+/* for tables  */
+@media (min-width: 768px) {
+  .bg__image {
+    background: url("images/pattern-background-desktop.svg") no-repeat
+      center/cover;
+    height: 50vh;
+    z-index: -1;
+  }
+  .container{
+      width: 500px;
+  }
+}
+/* all the bottons  */
+.btn {
+  border: none;
+  margin: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.btn-change {
+  text-decoration: underline;
+  background-color: transparent;
+  color: var(--bright_blue);
+}
+.btn-primary {
+  background-color: var(--bright_blue);
+  padding: 10px;
+  color: var(--very_pale_blue);
+  margin-bottom: 10px;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+.btn-secondary {
+  background-color: transparent;
+  color: var(--desaturated_blue);
+}
+.btn-secondary:hover {
+  background-color: transparent;
+  color: hsl(223, 47%, 23%);
+}
+.container .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* container  */
+.container {
+  background-color: hsl(225, 100%, 98%);
+  /* z-index: 1; */
+  border-radius: 7px;
+  /* background-color: aquamarine; ---> this looks fun*/
+  margin: 30px;
+  /* padding: 20px; */
+  padding-bottom: 20px;
+  box-shadow: 20px 16px 10px rgba(134, 150, 216, 0.87), 5px 5px 10px grey;
+}
+.container p.desc {
+    padding: 0 20px;
+}
+.container img.hero {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.container .pricing {
+  background-color: var(--very_pale_blue);
+  margin: 20px auto;
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .pricing article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .pricing article img {
+  margin-right: 10px;
+}
